@@ -1,3 +1,33 @@
+-- best_selling_games
+SELECT *
+FROM game_sales
+ORDER BY games_sold DESC
+LIMIT 10;
+
+SELECT s.year, COUNT(s.name) AS num_games, ROUND(AVG(r.critic_score), 2) AS avg_critic_score
+FROM game_sales AS s
+INNER JOIN reviews AS r
+	ON s.name = r.name
+GROUP BY s.year
+HAVING COUNT(s.name) >= 4
+ORDER BY avg_critic_score DESC
+LIMIT 10;
+
+-- golden_years
+SELECT 
+	c.year,
+	c.num_games,
+	c.avg_critic_score,
+	u.avg_user_score,
+	(c.avg_critic_score - u.avg_user_score) AS diff
+FROM critics_avg_year_rating AS c
+INNER JOIN users_avg_year_rating AS u
+	ON c.year = u.year
+WHERE c.avg_critic_score > 9 OR u.avg_user_score > 9
+ORDER BY c.year ASC;
+
+CONTEXT
+
 Video games are big business: the global gaming market is projected to be worth more than $300 billion by 2027 according to Mordor Intelligence. With so much money at stake, the major game publishers are hugely incentivized to create the next big hit. But are games getting better, or has the golden age of video games already passed?
 
 In this project, you'll analyze video game critic and user scores as well as sales data for the top 400 video games released since 1977. You'll search for a golden age of video games by identifying release years that users and critics liked best, and you'll explore the business side of gaming by looking at game sales data.
@@ -39,32 +69,3 @@ Your search will involve joining datasets and comparing results with set theory.
 |year| Release year of the games reviewed |`int`|  
 |num_games| Number of games released that year |`int`|
 |avg_critic_score| Average score of all the games ratings for the year |`float`|
-
-
--- best_selling_games
-SELECT *
-FROM game_sales
-ORDER BY games_sold DESC
-LIMIT 10;
-
-SELECT s.year, COUNT(s.name) AS num_games, ROUND(AVG(r.critic_score), 2) AS avg_critic_score
-FROM game_sales AS s
-INNER JOIN reviews AS r
-	ON s.name = r.name
-GROUP BY s.year
-HAVING COUNT(s.name) >= 4
-ORDER BY avg_critic_score DESC
-LIMIT 10;
-
--- golden_years
-SELECT 
-	c.year,
-	c.num_games,
-	c.avg_critic_score,
-	u.avg_user_score,
-	(c.avg_critic_score - u.avg_user_score) AS diff
-FROM critics_avg_year_rating AS c
-INNER JOIN users_avg_year_rating AS u
-	ON c.year = u.year
-WHERE c.avg_critic_score > 9 OR u.avg_user_score > 9
-ORDER BY c.year ASC;
