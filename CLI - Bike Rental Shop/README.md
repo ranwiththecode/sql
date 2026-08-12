@@ -1,4 +1,4 @@
-# Bike Rental Shop CLI README
+# Bike Rental Shop CLI
 
 A command-line interface (CLI) application built as part of the freeCodeCamp Relational Database Certification. This project demonstrates how to bridge the gap between database systems and application scripts by executing raw PostgreSQL queries inside a terminal application to manage live business inventory and customer workflows.
 
