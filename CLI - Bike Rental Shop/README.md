@@ -2,7 +2,7 @@
 
 A command-line interface (CLI) application built as part of the freeCodeCamp Relational Database Certification. This project demonstrates how to bridge the gap between database systems and application scripts by executing raw PostgreSQL queries inside a terminal application to manage live business inventory and customer workflows.
 
-## 📊 Analyst Focus & Skills Demonstrated
+## Analyst Focus & Skills Demonstrated
 While the wrapper application is written in Bash, the primary objective of this project was mastering database design and interaction:
 * **Relational Database Design:** Interacted with a multi-table schema consisting of `bikes`, `customers`, and `rentals` tables.
 * **Advanced Querying:** Wrote raw SQL utilizing `INNER JOIN`, `USING()` clauses, conditional filtering (`WHERE`), and sorting (`ORDER BY`).
@@ -11,14 +11,14 @@ While the wrapper application is written in Bash, the primary objective of this 
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 * **Database:** PostgreSQL
 * **Scripting Language:** Bash / Shell
 * **Interface:** Command Line Interface (CLI)
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 The script queries a `bikes` database in real-time to manage a local shop's workflows:
 
@@ -33,7 +33,7 @@ The script queries a `bikes` database in real-time to manage a local shop's work
 
 ---
 
-## 📂 Core SQL Concepts Utilized
+## Core SQL Concepts Utilized
 
 Here is a look at how data is fetched and manipulated under the hood:
 
