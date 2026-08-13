@@ -23,7 +23,7 @@ While Bash was used to automate the pipeline, the project highlights key relatio
 ---
 
 ## 🗄️ Database Schema
-
+```
 The database consists of two interconnected tables linked via foreign key relationships:
 +--------------------+       +------------------------------------+
 |       teams        |       |               games                |
@@ -36,7 +36,7 @@ The database consists of two interconnected tables linked via foreign key relati
 | winner_goals                       |
 | opponent_goals                     |
 +------------------------------------+
-
+```
 ---
 
 ## 📂 Core SQL Queries Highlighted
@@ -66,25 +66,28 @@ ORDER BY year;
 1. Database Setup
 
 Log into PostgreSQL and create the database schema:
+```
 psql --username=freecodecamp --dbname=postgres < worldcup.sql
+```
 
 2. Permissions
 
 Ensure execution permissions are set for both scripts:
 Bash
-
+```
 chmod +x insert_data.sh queries.sh
-
+```
 3. Run the Data Pipeline
 
 Populate the database from games.csv:
 Bash
-
+```
 ./insert_data.sh
-
+```
 4. Run Analytical Queries
 
 Execute the query engine to display analysis results:
 Bash
-
+```
 ./queries.sh
+```
