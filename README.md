@@ -18,5 +18,8 @@ Scales a guided analysis into an independent study of 10,000+ video game records
 **5. Golden Era of Video Games (Guided)** 
 project completed initially on DataCamp: https://www.datacamp.com/datalab/w/26afed2a-e656-45d4-bd56-f14c20433b52/edit 
 
-**6.Periodic Table Database**
+**6. Periodic Table Database**
 A custom bash script paired with a fully normalized PostgreSQL database that provides instantaneous atomic element data lookups. Built as part of the freeCodeCamp Relational Database curriculum, this milestone focused heavily on advanced SQL refactoring—including multi-table joins, establishing explicit foreign keys, adjusting column constraints, and executing strict data type conversions—alongside structural Git configuration adhering tightly to the Conventional Commits specification.
+
+**7. Number Guessing Game**
+An interactive Command Line Interface (CLI) application built with Bash and PostgreSQL that generates random numbers for players to guess while persisting real-time user statistics. Built for freeCodeCamp's Relational Database certification, this project features dynamic input validation, interactive looping, and relational database queries using SQL aggregate functions (`COUNT`, `MIN`) to deliver personalized user metrics and high-score tracking across multiple sessions.
